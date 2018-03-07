@@ -84,7 +84,7 @@ private[rdd] object GenomicRDD {
    * @see pipe
    *
    * @param cmd Command to replace references in.
-   * @param files List of paths to files.f
+   * @param files List of paths to files.
    * @return Returns a command, with file paths subbed in.
    */
   def processCommand(cmd: Seq[String],
