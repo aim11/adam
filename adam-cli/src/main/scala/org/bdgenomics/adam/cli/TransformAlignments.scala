@@ -131,9 +131,9 @@ class TransformAlignmentsArgs extends Args4jBase with ADAMSaveAnyArgs with Parqu
   var storageLevel: String = "MEMORY_ONLY"
   @Args4jOption(required = false, name = "-disable_pg", usage = "Disable writing a new @PG line.")
   var disableProcessingStep = false
-  @Args4jOption(required = false, name = "-partition_by_start_pos", usage = "EXPERIMENTAL: Save the data partitioned by genomic range bins based on start pos using Hive-style partitioning.")
+  @Args4jOption(required = false, name = "-partition_by_start_pos", usage = "Save the data partitioned by genomic range bins based on start pos using Hive-style partitioning.")
   var partitionByStartPos: Boolean = false
-  @Args4jOption(required = false, name = "-partition_bin_size", usage = "EXPERIMENTAL: Partition bin sized used in Hive-style partitioning.")
+  @Args4jOption(required = false, name = "-partition_bin_size", usage = "Partition bin sized used in Hive-style partitioning.")
   var partitionedBinSize = 0
 
   var command: String = null
