@@ -72,7 +72,7 @@ class TransformGenotypesArgs extends Args4jBase with ADAMSaveAnyArgs with Parque
   var partitionByStartPos: Boolean = false
 
   @Args4jOption(required = false, name = "-partition_bin_size", usage = "Partition bin sized used in Hive-style partitioning.")
-  var partitionedBinSize = 0
+  var partitionedBinSize = 1000000
 
   // must be defined due to ADAMSaveAnyArgs, but unused here
   var sortFastqOutput: Boolean = false
