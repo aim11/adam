@@ -225,14 +225,14 @@ parquet block size settings.
 The existence of the file ``_partitionedByStartPos`` can be tested with the public
 function ``ADAMContext.isPartitioned(path)`` and can be used to determine explicitly
 if an ADAM Parquet dataset is partitioned using this scheme. The parition size used
-when the dataset was written to disk is stored in ``_paritionedByStartPos`` and is
+when the dataset was written to disk is stored in ``_parititionedByStartPos`` and is
 read as a property of the dataset by the ``loadPartitionedParquet`` functions.
 
 The Spark dataset API recognizes that the field ``positionBin`` is defined implicitly
 by the Parquet files' paritioning scheme, and makes ``positionBin`` available as a field
-that can be queried through the Spark SQL API. ``positionBin`` is used interally by
-the public function ``GenomicRDD.filterByOverlappinRegions``. User code in ADAM-shell or
-a user applcations could similarly utilize the ``positionBin`` field when creating SPARK
+that can be queried through the Spark SQL API. ``positionBin`` is used internally by
+the public function ``GenomicRDD.filterByOverlappingRegions``. User code in ADAM-shell or user applcations
+could similarly utilize the ``positionBin`` field when creating Spark
 SQL queries on a ``genomicRDD.dataset`` backed by partitioned Parquet.
 
 **Re-using a previously loaded partitioned dataset:**
@@ -249,13 +249,3 @@ is key to realizing the latency advantages of partitioned datasets described abo
     val mydata = loadPartitionedParquetAlignments("alignmets.adam")
     val filteredCount1 = mydata.filterByOverlappingRegions(regions1).dataset.count
     val filteredCount2 = mydata.filterByOverlappingRegions(regions2).dataset.count
-
-
-
-
-
-
-
-
-
-

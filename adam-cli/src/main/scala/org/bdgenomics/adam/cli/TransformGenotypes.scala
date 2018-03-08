@@ -71,7 +71,7 @@ class TransformGenotypesArgs extends Args4jBase with ADAMSaveAnyArgs with Parque
   @Args4jOption(required = false, name = "-partition_by_start_pos", usage = "Save the data partitioned by genomic range bins based on start pos using Hive-style partitioning.")
   var partitionByStartPos: Boolean = false
 
-  @Args4jOption(required = false, name = "-partition_bin_size", usage = "Partition bin sized used in Hive-style partitioning.")
+  @Args4jOption(required = false, name = "-partition_bin_size", usage = "Partition bin sized used in Hive-style partitioning. Defaults to 1Mbp (1,000,000) base pairs).")
   var partitionedBinSize = 1000000
 
   // must be defined due to ADAMSaveAnyArgs, but unused here

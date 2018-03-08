@@ -1880,6 +1880,7 @@ class ADAMContext(@transient val sc: SparkContext) extends Serializable with Log
    * @param regions Optional list of genomic regions to load.
    * @param optLookbackPartitions Number of partitions to lookback to find beginning of an overlapping
    *         region when using the filterByOverlappingRegions function on the returned dataset.
+   *         Defaults to one partition.
    * @return Returns an AlignmentRecordRDD.
    */
   def loadPartitionedParquetAlignments(pathName: String,
@@ -2291,6 +2292,7 @@ class ADAMContext(@transient val sc: SparkContext) extends Serializable with Log
    * @param regions Optional list of genomic regions to load.
    * @param optLookbackPartitions Number of partitions to lookback to find beginning of an overlapping
    *         region when using the filterByOverlappingRegions function on the returned dataset.
+   *         Defaults to one partition.
    * @return Returns a GenotypeRDD.
    */
   def loadPartitionedParquetGenotypes(pathName: String,
@@ -2352,6 +2354,7 @@ class ADAMContext(@transient val sc: SparkContext) extends Serializable with Log
    * @param regions Optional list of genomic regions to load.
    * @param optLookbackPartitions Number of partitions to lookback to find beginning of an overlapping
    *         region when using the filterByOverlappingRegions function on the returned dataset.
+   *         Defaults to one partition.
    * @return Returns a VariantRDD
    */
   def loadPartitionedParquetVariants(pathName: String,
@@ -2695,6 +2698,7 @@ class ADAMContext(@transient val sc: SparkContext) extends Serializable with Log
    * @param regions Optional list of genomic regions to load.
    * @param optLookbackPartitions Number of partitions to lookback to find beginning of an overlapping
    *         region when using the filterByOverlappingRegions function on the returned dataset.
+   *         Defaults to one partition.
    * @return Returns a FeatureRDD.
    */
   def loadPartitionedParquetFeatures(pathName: String,
@@ -2753,6 +2757,7 @@ class ADAMContext(@transient val sc: SparkContext) extends Serializable with Log
    * @param regions Optional list of genomic regions to load.
    * @param optLookbackPartitions Number of partitions to lookback to find beginning of an overlapping
    *         region when using the filterByOverlappingRegions function on the returned dataset.
+   *         Defaults to one partition.
    * @return Returns a NucleotideContigFragmentRDD
    */
   def loadPartitionedParquetContigFragments(pathName: String,
